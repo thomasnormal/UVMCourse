@@ -47,7 +47,7 @@ module top;
  //         s1=new();
             //repeating 5 time using repeat
             repeat(5)  begin
-                //usimg `uvm_info to displaying
+                //using `uvm_info to displaying
                 `uvm_info("A_INFO","1...before global_overriding ",UVM_NONE);
                 void'(s1.randomize());
                 s1.print();
@@ -56,7 +56,7 @@ module top;
          s1=seq::type_id::create("s1");  
         // s1=new();
             repeat(5)  begin
-                //usimg `uvm_info to displaying
+                //using `uvm_info to displaying
                 `uvm_info("B_INFO","2...after factory overriding by using global_override ",UVM_NONE);
                 void'(s1.randomize());
                 s1.print();

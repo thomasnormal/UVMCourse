@@ -25,10 +25,10 @@ super.new(name, parent);
 
 //uvm severities
 
-uvm_report_info("TEST","inoformation severity--1 (info_none)", UVM_NONE);
-uvm_report_info("TEST","inoformation severity--1 (info_none)", UVM_NONE,`__FILE__,`__LINE__);
-uvm_report_error("TEST", "Error 1",UVM_NONE,`__FILE__,`__LINE__); 
-uvm_report_warning("TEST", "Warning occured", UVM_NONE,`__FILE__,`__LINE__);
+uvm_report_info("TEST","information severity--1 (info_none)", UVM_NONE);
+uvm_report_info("TEST","information severity--1 (info_none)", UVM_NONE,`__FILE__,`__LINE__);
+uvm_report_error("TEST", "Error 1",UVM_NONE,`__FILE__,`__LINE__);
+uvm_report_warning("TEST", "Warning occurred", UVM_NONE,`__FILE__,`__LINE__);
 uvm_report_fatal("TEST", "A fatal error has occurred",UVM_NONE,`__FILE__,`__LINE__); 
 endfunction
 

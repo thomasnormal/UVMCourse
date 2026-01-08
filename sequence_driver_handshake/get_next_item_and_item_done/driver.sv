@@ -23,7 +23,7 @@ seq_item_port.get_next_item(req);
 
 #15
 
-`uvm_info("Driver", $sformatf("Befor calling the item_done method data, a : %0d b:%0d", req.a, req.b), UVM_NONE);
+`uvm_info("Driver", $sformatf("Before calling the item_done method data, a : %0d b:%0d", req.a, req.b), UVM_NONE);
 
 //call the item_done method to send the request item back to sequencer
 seq_item_port.item_done();     

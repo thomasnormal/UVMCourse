@@ -28,7 +28,7 @@ class environ extends uvm_env;
     $display (uvm_resource_db#(int)::read_by_name("top.env","num3",b1));
     $display (uvm_resource_db#(int)::read_by_type("top.env",c));
     //$display (uvm_resource_db#(int)::read_by_type("top.env",d));
-    $display(" the overrided value of 'a'(num1) retrieved from read_by_name: %0d",a);
+    $display(" the overridden value of 'a'(num1) retrieved from read_by_name: %0d",a);
     $display(" the value of 'b'(num2) retrieved is %0d",b);
     $display(" the value of 'c' retrieved from read_by_type: %0d",c);
     //$display(" the value of 'c'(num4) retrieved is %0d",d);

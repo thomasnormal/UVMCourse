@@ -39,7 +39,7 @@ class test extends uvm_test;
 
  task pre_reset_phase(uvm_phase phase);
 
-   `uvm_info(get_full_name(), {" Inside pre_reset__phase ", get_full_name()}, UVM_LOW);
+   `uvm_info(get_full_name(), {" Inside pre_reset_phase ", get_full_name()}, UVM_LOW);
 
  endtask:pre_reset_phase
 
@@ -48,21 +48,21 @@ class test extends uvm_test;
 
  task reset_phase(uvm_phase phase);
 
-   `uvm_info(get_full_name(), {" Inside reset__phase ", get_full_name()}, UVM_LOW);
+   `uvm_info(get_full_name(), {" Inside reset_phase ", get_full_name()}, UVM_LOW);
 
  endtask:reset_phase
 
 
  task  post_reset_phase(uvm_phase phase);
 
-   `uvm_info(get_full_name(), {" Inside post_reset__phase ", get_full_name()}, UVM_LOW);
+   `uvm_info(get_full_name(), {" Inside post_reset_phase ", get_full_name()}, UVM_LOW);
 
  endtask: post_reset_phase
 
 
  task  pre_configure_phase(uvm_phase phase);
 
-   `uvm_info(get_full_name(), {" Inside pre_configure__phase ", get_full_name()}, UVM_LOW);
+   `uvm_info(get_full_name(), {" Inside pre_configure_phase ", get_full_name()}, UVM_LOW);
 
 
  endtask: pre_configure_phase
@@ -71,34 +71,34 @@ class test extends uvm_test;
  task  configure_phase(uvm_phase phase);
 
 
-   `uvm_info(get_full_name(), {" Inside configure__phase ", get_full_name()}, UVM_LOW);
+   `uvm_info(get_full_name(), {" Inside configure_phase ", get_full_name()}, UVM_LOW);
 
  endtask: configure_phase
 
 
  task  post_configure_phase(uvm_phase phase);
 
-   `uvm_info(get_full_name(), {" Inside Post_configure__phase ", get_full_name()}, UVM_LOW);
+   `uvm_info(get_full_name(), {" Inside Post_configure_phase ", get_full_name()}, UVM_LOW);
 
  endtask: post_configure_phase
 
  task  pre_main_phase(uvm_phase phase);
 
-   `uvm_info(get_full_name(), {" Inside Pre_main__phase ", get_full_name()}, UVM_LOW);
+   `uvm_info(get_full_name(), {" Inside Pre_main_phase ", get_full_name()}, UVM_LOW);
 
  endtask: pre_main_phase
 
 
  task main_phase(uvm_phase phase);
 
-   `uvm_info(get_full_name(), {" Inside main__phase ", get_full_name()}, UVM_LOW);
+   `uvm_info(get_full_name(), {" Inside main_phase ", get_full_name()}, UVM_LOW);
 
  endtask: main_phase
 
 
  task post_main_phase(uvm_phase phase);
 
-   `uvm_info(get_full_name(), {" Inside Post_main__phase ", get_full_name()}, UVM_LOW);
+   `uvm_info(get_full_name(), {" Inside Post_main_phase ", get_full_name()}, UVM_LOW);
 
  endtask: post_main_phase
 
@@ -121,7 +121,7 @@ class test extends uvm_test;
 
  task  post_shutdown_phase(uvm_phase phase);
 
-   `uvm_info(get_full_name(), {" Inside shutdown_phase ", get_full_name()}, UVM_LOW);
+   `uvm_info(get_full_name(), {" Inside post_shutdown_phase ", get_full_name()}, UVM_LOW);
 
  endtask: post_shutdown_phase
 

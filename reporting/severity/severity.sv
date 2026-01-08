@@ -25,8 +25,8 @@ super.new(name, parent);
 
 //uvm severities
 
-`uvm_warning("TEST", "Warning occured");
-`uvm_info("TEST","inoformation severity--1 (info_none)", UVM_NONE);
+`uvm_warning("TEST", "Warning occurred");
+`uvm_info("TEST","information severity--1 (info_none)", UVM_NONE);
 `uvm_info("TEST","information severity--2 (info_medium)", UVM_MEDIUM);
 `uvm_info("TEST","information severity--3 (info_low)", UVM_LOW);
 `uvm_error("TEST", "Error 1"); 

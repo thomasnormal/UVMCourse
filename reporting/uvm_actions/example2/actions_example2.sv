@@ -24,7 +24,7 @@ class rpting extends uvm_component;
     "This is information 4",UVM_MEDIUM);
 
     uvm_report_warning(get_full_name(),
-    "Warning Messgae from rpting",UVM_LOW);
+    "Warning Message from rpting",UVM_LOW);
 
     uvm_report_error(get_full_name(),
     "Error Message from rpting \n\n",UVM_LOW);
@@ -43,7 +43,7 @@ initial begin
   rpt2 = new("rpt2",null);
   rpt3 = new("rpt3",null);
 
-  //Do nohing when error message occur
+  //Do nothing when error message occurs
   rpt1.set_report_severity_action(UVM_ERROR,UVM_NO_ACTION);
   // capture the message in named file
   rpt2.set_report_id_action("rpt2",UVM_LOG);

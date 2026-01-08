@@ -56,7 +56,7 @@ class driver extends uvm_driver#(seq_item);
 
     super.check_phase(phase);
     if(count_for_randomization == req.value)
-      `uvm_info("check","All randomized values recieved",UVM_LOW)
+      `uvm_info("check","All randomized values received",UVM_LOW)
     else
       `uvm_info("check","Some randomized values are missing",UVM_LOW)
 
@@ -68,7 +68,7 @@ endfunction:check_phase
 
     super.report_phase(phase);
     file = $fopen("report_for_driver","w");
-    $fdisplay(file,"Total no of randomizations happend are %0d",count_for_randomization);
+    $fdisplay(file,"Total no of randomizations happened are %0d",count_for_randomization);
     $fdisplay(file,"All randomized values of a are %0d",req.a);
     $fdisplay(file,"All randomized values of b are %0d",req.b);
     $fdisplay(file,"Outputs of y are %0p",q);

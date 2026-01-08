@@ -39,7 +39,7 @@ endclass
  trans=new();  // create new packet 
  
  void'(trans.randomize());
- `uvm_info("Sender","Reciever has requested for transaction",UVM_NONE);
+ `uvm_info("Sender","Receiver has requested for transaction",UVM_NONE);
  trans.print(uvm_default_table_printer);
  return 1;
  endfunction
@@ -52,12 +52,12 @@ void'( std::randomize(ready)with{ready dist{0:/80,1:/10};});
 
  endclass 
 
-// Creating a reciever class
-class reciever extends uvm_component;
-  `uvm_component_utils(reciever)
+// Creating a receiver class
+class receiver extends uvm_component;
+  `uvm_component_utils(receiver)
 uvm_nonblocking_get_port #(transaction) get_port;
 
-function new (string name ="reciever",uvm_component parent=null);
+function new (string name ="receiver",uvm_component parent=null);
   super.new(name,parent);
 endfunction
 
@@ -71,20 +71,20 @@ transaction trans;
 phase.raise_objection(this);
 for(int i=0;i<=1;i++)begin
 while(!get_port.can_get())begin
- #10 `uvm_info("Reciever","Check can_get() is ready",UVM_NONE)
+ #10 `uvm_info("Receiver","Check can_get() is ready",UVM_NONE)
 end 
-`uvm_info("Reciever","Sender is ready ,get transaction now",UVM_NONE)
+`uvm_info("Receiver","Sender is ready ,get transaction now",UVM_NONE)
 
 
   if(get_port.try_get(trans)) 
-  `uvm_info("Reciever","Just now recieved transaction from reciever",UVM_NONE)
+  `uvm_info("Receiver","Just now received transaction from receiver",UVM_NONE)
  
-  //`uvm_info("Reciever","DONE",UVM_NONE) 
+  //`uvm_info("Receiver","DONE",UVM_NONE) 
 else 
-  `uvm_info("Reciever","Transaction not recieved",UVM_NONE)
+  `uvm_info("Receiver","Transaction not received",UVM_NONE)
 
   phase.print(uvm_default_table_printer);
-  `uvm_info("Reciever","DONE",UVM_NONE)
+  `uvm_info("Receiver","DONE",UVM_NONE)
 end 
 phase.drop_objection(this);
 endtask
@@ -96,7 +96,7 @@ endclass
 class my_test extends uvm_test;
   `uvm_component_utils(my_test)
  sender sndr;
- reciever rcvr;
+ receiver rcvr;
   function new(string name = "my_test",uvm_component parent =null);
     super.new(name,parent);
   endfunction 
@@ -105,10 +105,10 @@ class my_test extends uvm_test;
     super.build_phase(phase);
 
     sndr=sender::type_id::create("sndr",this);
-    rcvr=reciever::type_id::create("rcvr",this);
+    rcvr=receiver::type_id::create("rcvr",this);
   endfunction 
 
-//Connection between sender to reciever
+//Connection between sender to receiver
 virtual function void connect_phase(uvm_phase phase);
 //super.connect_phase(phase);
 rcvr.get_port.connect(sndr.get_imp);

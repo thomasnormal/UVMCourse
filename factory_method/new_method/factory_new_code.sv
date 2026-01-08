@@ -54,7 +54,7 @@ endfunction
      s1=new();
             //repeating 5 time using repeat
             repeat(5)  begin
-                //usimg `uvm_info to displaying
+                //using `uvm_info to displaying
                 `uvm_info("B_INFO","1...factory is created by using create method",UVM_NONE);
 //        s1=seq::type_id::create("s1");  
            build();
@@ -62,7 +62,7 @@ endfunction
                 factory.set_type_override_by_type(seq::get_type(),extend_seq::get_type());
         
             repeat(5)  begin
-                //usimg `uvm_info to displaying
+                //using `uvm_info to displaying
                 `uvm_info("A_INFO","2...factory is created by using new method",UVM_NONE);
 //         s1=seq::type_id::create("s1");  
          s1=new();

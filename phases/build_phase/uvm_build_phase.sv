@@ -59,7 +59,7 @@ class test extends uvm_test;
     
     // This is used to call the parent class build phase 
     // where the backward call for build() method happens
-    // to configure the fields which already registerd.
+    // to configure the fields which already registered.
     super.build_phase(phase);
     
     if(obj == null)

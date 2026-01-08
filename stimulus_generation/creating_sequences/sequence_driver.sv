@@ -41,7 +41,7 @@ transaction trans;
  `uvm_info("SEQ1","Grant received now randomizing the data",UVM_NONE)
  assert(trans.randomize());
  trans.print();
- `uvm_info("SEQ1","Randmization done and now sent request to driver",UVM_NONE)
+ `uvm_info("SEQ1","Randomization done and now sent request to driver",UVM_NONE)
  send_request(trans);
 `uvm_info("SEQ1","Waiting for item done response from driver",UVM_NONE)
 wait_for_item_done();

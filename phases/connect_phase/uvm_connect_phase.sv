@@ -47,13 +47,13 @@ class transmitter extends uvm_sequencer#(object);
   endfunction
 endclass
 
-class reciever extends uvm_driver#(object);
+class receiver extends uvm_driver#(object);
 
-  `uvm_component_utils(reciever)
+  `uvm_component_utils(receiver)
 
   object obj;
 
-  function new(string name = "reciever",uvm_component parent = null);
+  function new(string name = "receiver",uvm_component parent = null);
     super.new(name,parent);
   endfunction
 
@@ -78,18 +78,18 @@ class agent extends uvm_agent;
   `uvm_component_utils(agent)
   
   transmitter trans;
-  reciever rec;
-  
+  receiver rec;
+
   function new(string name = "agent",uvm_component parent = null);
     super.new(name,parent);
   endfunction
-  
+
   function void build_phase(uvm_phase phase);
-    
+
     super.build_phase(phase);
-    
+
     trans = transmitter::type_id::create("trans",this);
-    rec = reciever::type_id::create("rec",this);
+    rec = receiver::type_id::create("rec",this);
 
   endfunction
   

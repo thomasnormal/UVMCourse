@@ -83,8 +83,8 @@ endclass
      transaction trans;
      `uvm_component_utils(sub3)
      uvm_analysis_imp #(transaction , sub3) aimp;
-       
-   function new (string name = "sub2" , uvm_component parent);
+
+   function new (string name = "sub3" , uvm_component parent);
      super.new (name,parent);
      aimp = new("READ",this);
    endfunction

@@ -25,12 +25,12 @@ module top;
   //Within initial
   initial 
           begin
-          //create an instance of seq using factory creat()
+          //create an instance of seq using factory create()
             s1= seq::type_id::create("s1");
             //repeating 5 time using repeat
             repeat(5) 
                 begin
-            //usimg `uvm_info to displaying
+            //using `uvm_info to displaying
                 `uvm_info("INFO","factory is created by using create method",UVM_NONE);
        void'(s1.randomize());
     

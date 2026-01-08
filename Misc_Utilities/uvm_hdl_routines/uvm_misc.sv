@@ -22,7 +22,7 @@ endmodule:fulladder
 //-------------------------------------------------------
 module bit4adder(input [3:0]A,
 //-------------------------------------------------------
-//Decalration of input and output signals
+//Declaration of input and output signals
 //of 4-bit Ripple carry adder
 //-------------------------------------------------------
   input [3:0]B,
@@ -42,7 +42,7 @@ endmodule:bit4adder
 
 //Access for class uvm package
 import uvm_pkg::*;
-//Acess for uvm_macros
+//Access for uvm_macros
 `include "uvm_macros.svh"
 
 //-------------------------------------------------------
@@ -147,7 +147,7 @@ endclass
 //instantiation of interface
   inter intf();
 
-//instatiation of 4bit Ripple carry adder
+//instantiation of 4bit Ripple carry adder
   bit4adder Ripple(.A(intf.A), .B(intf.B), .C0(intf.C0), .S(intf.S), .C4(intf.C4));
 
   initial begin
@@ -176,7 +176,7 @@ endclass
     intf.A=1;
     
     #1; //66ns 
-    `uvm_info("checking","Ending Simualtion now........",UVM_LOW)
+    `uvm_info("checking","Ending Simulation now........",UVM_LOW)
  end
     
 endmodule:top

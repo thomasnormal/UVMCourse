@@ -17,8 +17,8 @@ class my_comp extends uvm_component;
 
     for(int i = 0;i<3;i++)
     begin
-      `uvm_info("Randamaizing", $sformatf("a: %0d", a), UVM_LOW)
-      `uvm_info("STAT", $sformatf("Randamaize successful"), UVM_LOW)   
+      `uvm_info("Randomizing", $sformatf("a: %0d", a), UVM_LOW)
+      `uvm_info("STAT", $sformatf("Randomize successful"), UVM_LOW)   
       a = $urandom();
     end
 

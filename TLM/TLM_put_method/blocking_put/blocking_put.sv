@@ -57,7 +57,7 @@ endclass
 class env extends uvm_env;
   `uvm_component_utils(env)
 
-  component1 c1;;
+  component1 c1;
   component2 c2;
 
 

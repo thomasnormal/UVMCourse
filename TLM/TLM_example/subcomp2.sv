@@ -20,7 +20,7 @@ class subcomp2 extends uvm_component;
     repeat(m_tx) begin 
       #100;
       m_get_port.get(pkt);
-      `uvm_info("SUBCOMP2","packet recieved from component A",UVM_LOW); 
+      `uvm_info("SUBCOMP2","packet received from component A",UVM_LOW); 
      pkt.print(uvm_default_line_printer);
       m_put_port.put(pkt);
       `uvm_info("SUBCOMP2","subcomp2 is done",UVM_MEDIUM); 

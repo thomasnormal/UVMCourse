@@ -25,9 +25,9 @@ super.new(name, parent);
 
 //uvm severities
 
-`uvm_info("TEST","inoformation severity--1 (info_none)", UVM_NONE);
+`uvm_info("TEST","information severity--1 (info_none)", UVM_NONE);
 `uvm_info(get_name(),"get_name() information severity--3 (info_low)", UVM_LOW);
-`uvm_info(get_full_name(),"get_full_name() inoformation severity--1 (info_none)", UVM_NONE);
+`uvm_info(get_full_name(),"get_full_name() information severity--1 (info_none)", UVM_NONE);
 `uvm_info(get_type_name(),"get_type_name() information severity--2 (info_medium)", UVM_MEDIUM);
 endfunction
 
