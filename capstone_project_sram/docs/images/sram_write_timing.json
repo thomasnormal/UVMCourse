@@ -1,0 +1,25 @@
+{
+  "signal": [
+    {"name": "PCLK",      "wave": "P.........|...."},
+    {},
+    {"name": "ADDR",      "wave": "x.2.......|...x", "data": ["Valid Address"]},
+    {},
+    {"name": "CE_N",      "wave": "1..0......|...1"},
+    {"name": "OE_N",      "wave": "1.........|...."},
+    {"name": "WE_N",      "wave": "1.....0..1|...."},
+    {},
+    {"name": "DATA",      "wave": "z...2.....|..zx", "data": ["Valid Data"]},
+    {},
+    {"name": "PREADY",    "wave": "0.........|..10"}
+  ],
+  "edge": ["A+B tAS", "C+D tDS", "D+E tWP", "E+F tDH"],
+  "head": {
+    "text": "SRAM Write Cycle Timing"
+  },
+  "foot": {
+    "text": "tAS = Address Setup | tDS = Data Setup | tWP = Write Pulse | tDH = Data Hold"
+  },
+  "config": {
+    "hscale": 1.5
+  }
+}

@@ -310,55 +310,37 @@ The SPI master supports all four standard SPI modes:
 
 ### 7.2 Mode 0 Timing (CPOL=0, CPHA=0)
 
-```
-SS_N    ‾‾‾‾\_____________________________________________/‾‾‾‾
-            |                                             |
-SCLK    ____/ ‾ \ _ / ‾ \ _ / ‾ \ _ / ‾ \ _ / ‾ \ _ / ‾ \ _ /____
-            |   |   |   |   |   |   |   |   |   |   |   |   |
-MOSI    ----<D7 |D6 |D5 |D4 |D3 |D2 |D1 |D0 >---------------
-            |   ↑   ↑   ↑   ↑   ↑   ↑   ↑   ↑
-MISO    ----<d7 |d6 |d5 |d4 |d3 |d2 |d1 |d0 >---------------
-                Sample on rising edge
-```
+![SPI Mode 0 Timing](images/spi_mode0.png)
+
+- SCLK idles low (CPOL=0)
+- Data is valid before the first clock edge
+- Data is sampled on the rising edge of SCLK (CPHA=0)
+- Data changes on the falling edge of SCLK
 
 ### 7.3 Mode 1 Timing (CPOL=0, CPHA=1)
 
-```
-SS_N    ‾‾‾‾\_____________________________________________/‾‾‾‾
-            |                                             |
-SCLK    ____/ ‾ \ _ / ‾ \ _ / ‾ \ _ / ‾ \ _ / ‾ \ _ / ‾ \ _ /____
-            |   |   |   |   |   |   |   |   |   |   |   |   |
-MOSI    --------<D7 |D6 |D5 |D4 |D3 |D2 |D1 |D0 >-----------
-                |   ↑   ↑   ↑   ↑   ↑   ↑   ↑   ↑
-MISO    --------<d7 |d6 |d5 |d4 |d3 |d2 |d1 |d0 >-----------
-                    Sample on falling edge
-```
+![SPI Mode 1 Timing](images/spi_mode1.png)
+
+- SCLK idles low (CPOL=0)
+- Data changes on the rising edge of SCLK
+- Data is sampled on the falling edge of SCLK (CPHA=1)
 
 ### 7.4 Mode 2 Timing (CPOL=1, CPHA=0)
 
-```
-SS_N    ‾‾‾‾\_____________________________________________/‾‾‾‾
-            |                                             |
-SCLK    ‾‾‾‾\ _ / ‾ \ _ / ‾ \ _ / ‾ \ _ / ‾ \ _ / ‾ \ _ / ‾‾‾‾
-            |   |   |   |   |   |   |   |   |   |   |   |   |
-MOSI    ----<D7 |D6 |D5 |D4 |D3 |D2 |D1 |D0 >---------------
-            |   ↑   ↑   ↑   ↑   ↑   ↑   ↑   ↑
-MISO    ----<d7 |d6 |d5 |d4 |d3 |d2 |d1 |d0 >---------------
-                Sample on falling edge
-```
+![SPI Mode 2 Timing](images/spi_mode2.png)
+
+- SCLK idles high (CPOL=1)
+- Data is valid before the first clock edge
+- Data is sampled on the falling edge of SCLK (CPHA=0)
+- Data changes on the rising edge of SCLK
 
 ### 7.5 Mode 3 Timing (CPOL=1, CPHA=1)
 
-```
-SS_N    ‾‾‾‾\_____________________________________________/‾‾‾‾
-            |                                             |
-SCLK    ‾‾‾‾\ _ / ‾ \ _ / ‾ \ _ / ‾ \ _ / ‾ \ _ / ‾ \ _ / ‾‾‾‾
-            |   |   |   |   |   |   |   |   |   |   |   |   |
-MOSI    --------<D7 |D6 |D5 |D4 |D3 |D2 |D1 |D0 >-----------
-                |   ↑   ↑   ↑   ↑   ↑   ↑   ↑   ↑
-MISO    --------<d7 |d6 |d5 |d4 |d3 |d2 |d1 |d0 >-----------
-                    Sample on rising edge
-```
+![SPI Mode 3 Timing](images/spi_mode3.png)
+
+- SCLK idles high (CPOL=1)
+- Data changes on the falling edge of SCLK
+- Data is sampled on the rising edge of SCLK (CPHA=1)
 
 ### 7.6 Data Ordering
 

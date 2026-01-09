@@ -1,0 +1,24 @@
+{
+  "signal": [
+    {"name": "PCLK",      "wave": "P.........|..."},
+    {},
+    {"name": "ADDR",      "wave": "x.2.......|..x", "data": ["Valid Address"]},
+    {},
+    {"name": "CE_N",      "wave": "1.0.......|..1"},
+    {"name": "OE_N",      "wave": "1..0......|..1"},
+    {"name": "WE_N",      "wave": "1.........|..."},
+    {},
+    {"name": "DATA",      "wave": "z...x....2|..z", "data": ["Valid"]},
+    {},
+    {"name": "PREADY",    "wave": "0.........|.10"}
+  ],
+  "head": {
+    "text": "SRAM Read Cycle Timing"
+  },
+  "foot": {
+    "text": "tAA = Address to Data valid | tOE = OE_N low to Data valid"
+  },
+  "config": {
+    "hscale": 1.5
+  }
+}

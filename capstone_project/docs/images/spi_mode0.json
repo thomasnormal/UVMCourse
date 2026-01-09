@@ -1,0 +1,22 @@
+{
+  "signal": [
+    {"name": "SS_N",   "wave": "1.0...............1"},
+    {},
+    {"name": "SCLK",   "wave": "0..PLPLPLPLPLPLPL.0"},
+    {},
+    {"name": "MOSI",   "wave": "x.2.3.4.5.6.7.8.9.x", "data": ["D7", "D6", "D5", "D4", "D3", "D2", "D1", "D0"]},
+    {"name": "MISO",   "wave": "x.2.3.4.5.6.7.8.9.x", "data": ["d7", "d6", "d5", "d4", "d3", "d2", "d1", "d0"]},
+    {},
+    {"name": "Sample", "wave": "0..1.1.1.1.1.1.1.1.0", "node": "...A.B.C.D.E.F.G.H"}
+  ],
+  "edge": ["A-~>MISO", "B-~>MISO", "C-~>MISO", "D-~>MISO"],
+  "head": {
+    "text": "SPI Mode 0 (CPOL=0, CPHA=0)"
+  },
+  "foot": {
+    "text": "SCLK idles LOW. Data sampled on RISING edge."
+  },
+  "config": {
+    "hscale": 1.5
+  }
+}
